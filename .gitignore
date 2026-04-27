@@ -37,7 +37,8 @@ cache/
 artifacts/
 broadcast/
 cache_forge/
-lib/
+# Foundry deps live at repo root only — do not use plain `lib/` or `src/lib/` is never committed
+/lib/
 
 # --- FRONTEND (React / Next.js) ---
 node_modules/
