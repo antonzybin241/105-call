@@ -1,0 +1,3 @@
+# KinetiFi: Autonomous DeFi Optimization (Base Mainnet)
+
+**KinetiFi** is a next-generation decentralized finance (DeFi) portfolio optimizer that bridges AI-driven market intelligence with non-custodial on-chain execution. It enables users to deploy a personal **KinetiFi AI Agent** that scans the **Base Mainnet** ecosystem for yield opportunities and registers "Intents" to autonomously improve portfolio performance.
