@@ -1,5 +1,5 @@
-/**
- * KinetiFi — Reown AppKit + Wagmi v2
+﻿/**
+ * ZenithFi — Reown AppKit + Wagmi v2
  *
  * This file creates the WagmiAdapter and initialises the Reown AppKit modal.
  * The modal handles MetaMask, WalletConnect, Coinbase Wallet, and every other
@@ -21,7 +21,7 @@ const projectId = import.meta.env.VITE_WALLETCONNECT_PROJECT_ID as string;
 
 if (!projectId) {
   console.warn(
-    '[KinetiFi] VITE_WALLETCONNECT_PROJECT_ID is not set. ' +
+    '[ZenithFi] VITE_WALLETCONNECT_PROJECT_ID is not set. ' +
       'Mobile wallets will not work. Add it to Vercel → Settings → Environment Variables.'
   );
 }
@@ -48,10 +48,10 @@ createAppKit({
   networks,
   projectId: projectId ?? 'placeholder',
   metadata: {
-    name: 'KinetiFi',
+    name: 'ZenithFi',
     description: 'Autonomous DeFi Optimisation on Base',
-    url: typeof window !== 'undefined' ? window.location.origin : 'https://KinetiFi.vercel.app',
-    icons: ['https://KinetiFi.vercel.app/favicon.ico'],
+    url: typeof window !== 'undefined' ? window.location.origin : 'https://ZenithFi.vercel.app',
+    icons: ['https://ZenithFi.vercel.app/favicon.ico'],
   },
   features: {
     analytics: false,  // disable cloud analytics

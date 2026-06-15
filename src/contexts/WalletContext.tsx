@@ -1,8 +1,8 @@
-/**
+﻿/**
  * WalletContext — Reown AppKit + wagmi v2
  *
  * Extends the base wagmi connection state with:
- *  - smartAccountAddress: predicted via KinetiFiAccountFactory.getAddress(eoa, 0)
+ *  - smartAccountAddress: predicted via ZenithFiAccountFactory.getAddress(eoa, 0)
  *  - isSmartAccountDeployed: true if bytecode exists at that address
  *  - discoveryTriggered: true once POST /start-discovery has been sent to the agent
  */
@@ -18,9 +18,9 @@ import {
 } from 'wagmi';
 import { formatEther } from 'viem';
 import {
-  KinetiFi_ACCOUNT_ADDRESS,
-  KinetiFi_ACCOUNT_FACTORY_ADDRESS,
-  KinetiFiAccountFactoryAbi,
+  ZenithFi_ACCOUNT_ADDRESS,
+  ZenithFi_ACCOUNT_FACTORY_ADDRESS,
+  ZenithFiAccountFactoryAbi,
 } from '@/constants/contracts';
 import { useEnvironment } from '@/contexts/EnvironmentContext';
 
@@ -115,8 +115,8 @@ export const WalletProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     isLoading: predicting,
     isError: predictError,
   } = useReadContract({
-    address: KinetiFi_ACCOUNT_FACTORY_ADDRESS,
-    abi: KinetiFiAccountFactoryAbi,
+    address: ZenithFi_ACCOUNT_FACTORY_ADDRESS,
+    abi: ZenithFiAccountFactoryAbi,
     functionName: 'getAddress',
     args: eoaAddress ? [eoaAddress, BigInt(0)] : undefined,
     chainId: targetChain.id,
@@ -134,7 +134,7 @@ export const WalletProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   // so balance / token reads work even if the factory RPC call fails.
   const smartAccountAddress: `0x${string}` | null =
     (predictedAddress as `0x${string}` | undefined) ??
-    (eoaAddress ? KinetiFi_ACCOUNT_ADDRESS : null);
+    (eoaAddress ? ZenithFi_ACCOUNT_ADDRESS : null);
 
   // ── 3. Deployment check — useBytecode ────────────────────────────────────────
 
@@ -182,7 +182,7 @@ export const WalletProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       .then(() => setDiscoveryTriggered(true))
       .catch((err) => {
         // Agent may be offline — log and continue gracefully
-        console.warn('[KinetiFi] Agent discovery trigger failed:', err.message);
+        console.warn('[ZenithFi] Agent discovery trigger failed:', err.message);
         setDiscoveryTriggered(false);
       });
   }, [smartAccountAddress, isConnected, targetChain.id, environment]);

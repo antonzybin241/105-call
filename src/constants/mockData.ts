@@ -1,4 +1,4 @@
-
+﻿
 import { Address } from 'viem';
 
 export const MOCK_EOA_ADDRESS = '0x1234567890123456789012345678901234567890' as Address;
@@ -193,7 +193,7 @@ export const mockAgentStrategy = {
       is_recommended: true
     },
     {
-      protocol: 'KinetiFi Agent',
+      protocol: 'ZenithFi Agent',
       target_protocol: 'Auto-Compounder v1',
       current_protocol: 'Manual Harvesting',
       pair: 'Global Portfolio',

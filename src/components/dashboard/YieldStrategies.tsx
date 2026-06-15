@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useCallback, useRef, useEffect } from 'react';
+﻿import React, { useState, useMemo, useCallback, useRef, useEffect } from 'react';
 import { useReadContract, useWriteContract, useWaitForTransactionReceipt, useAccount } from 'wagmi';
 import {
   TrendingUp, Shield, Zap, AlertTriangle, CheckCircle2, Info,
@@ -255,7 +255,7 @@ const OpportunityCard: React.FC<{
                   style={{ background: 'rgba(255,184,0,0.15)', color: '#FFB800', border: '1px solid rgba(255,184,0,0.3)' }}
                 >
                   <Star size={7} className="fill-[#FFB800]" />
-                  KinetiFi Recommended
+                  ZenithFi Recommended
                 </span>
               )}
             </div>
@@ -619,14 +619,14 @@ const AgentPanel: React.FC<AgentPanelProps> = ({ isAgentActive }) => {
   
   // 1. Local state for immediate UI feedback on refresh
   const [localActive, setLocalActive] = useState(() => {
-    return localStorage.getItem('KinetiFi_agent_persistent_active') === 'true';
+    return localStorage.getItem('ZenithFi_agent_persistent_active') === 'true';
   });
 
   // 2. Sync local state with backend/on-chain truth when they arrive
   useEffect(() => {
     if (isSessionActive || isAgentActive) {
       setLocalActive(true);
-      localStorage.setItem('KinetiFi_agent_persistent_active', 'true');
+      localStorage.setItem('ZenithFi_agent_persistent_active', 'true');
     }
   }, [isSessionActive, isAgentActive]);
 
@@ -641,7 +641,7 @@ const AgentPanel: React.FC<AgentPanelProps> = ({ isAgentActive }) => {
     
     // Set local state immediately for UX
     setLocalActive(true);
-    localStorage.setItem('KinetiFi_agent_persistent_active', 'true');
+    localStorage.setItem('ZenithFi_agent_persistent_active', 'true');
 
     // 1. Notify Backend Agent to start its 24h window (Software side)
     try {
@@ -748,7 +748,7 @@ const YieldStrategies: React.FC = () => {
 
   // 1. Silent sync: Ensure backend knows we are active once per mount
   useEffect(() => {
-    const isPersistentActive = localStorage.getItem('KinetiFi_agent_persistent_active') === 'true';
+    const isPersistentActive = localStorage.getItem('ZenithFi_agent_persistent_active') === 'true';
     if (isPersistentActive && !strategyData?.user_preferences?.is_active && !hasSyncedRef.current) {
       hasSyncedRef.current = true;
       let ws: WebSocket | null = null;
@@ -758,7 +758,7 @@ const YieldStrategies: React.FC = () => {
         ws.onopen = () => {
           ws?.send(JSON.stringify({ type: 'ACTIVATE_AGENT' }));
           setTimeout(() => ws?.close(), 2000);
-          console.log('KinetiFi: Silent backend activation synced.');
+          console.log('ZenithFi: Silent backend activation synced.');
         };
       } catch (e) { 
           if (ws) ws.close();
@@ -903,7 +903,7 @@ const YieldStrategies: React.FC = () => {
       <div className="flex items-center gap-3 px-5 py-4 rounded-2xl bg-white/[0.03] border border-white/[0.08]">
         <Info size={18} className="text-[#00D4FF] flex-shrink-0" />
         <p className="text-[11px] text-gray-500 leading-relaxed font-medium">
-          The KinetiFi Leaderboard is refreshed every 5 minutes. The **Elite Selection Algorithm** deduplicates fee tiers and prioritizes liquidity depth to ensure your $20,000+ capital moves are executed with minimal slippage.
+          The ZenithFi Leaderboard is refreshed every 5 minutes. The **Elite Selection Algorithm** deduplicates fee tiers and prioritizes liquidity depth to ensure your $20,000+ capital moves are executed with minimal slippage.
         </p>
       </div>
     </div>

@@ -1,9 +1,9 @@
-import { useQuery } from '@tanstack/react-query';
+﻿import { useQuery } from '@tanstack/react-query';
 import { useWallet } from '@/contexts/WalletContext';
 
 const AGENT_BASE_URL = import.meta.env.VITE_AGENT_API_URL ?? 'http://localhost:8000';
 
-// ── Response types from KinetiFi Agent POST /optimize ─────────────────────────
+// ── Response types from ZenithFi Agent POST /optimize ─────────────────────────
 
 export interface AgentOpportunity {
   current_protocol: string;

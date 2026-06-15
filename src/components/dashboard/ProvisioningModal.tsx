@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import confetti from 'canvas-confetti';
 import { Droplet, X, Loader2, CheckCircle2 } from 'lucide-react';
@@ -21,7 +21,7 @@ const ProvisioningModal: React.FC = () => {
     // Check localStorage and conditionally open modal when entering SANDBOX
     useEffect(() => {
         if (environment === 'SANDBOX') {
-            const hasProvisioned = localStorage.getItem('KinetiFi_sandbox_provisioned');
+            const hasProvisioned = localStorage.getItem('ZenithFi_sandbox_provisioned');
             if (!hasProvisioned) {
                 // Small delay so it doesn't pop instantly on page load
                 const timer = setTimeout(() => setIsOpen(true), 1500);
@@ -42,7 +42,7 @@ const ProvisioningModal: React.FC = () => {
     const handleClose = () => {
         setIsOpen(false);
         // Remember that the user closed it so we don't nag them again this session
-        localStorage.setItem('KinetiFi_sandbox_provisioned', 'true');
+        localStorage.setItem('ZenithFi_sandbox_provisioned', 'true');
     };
 
     const handleProvision = async () => {
@@ -182,7 +182,7 @@ const ProvisioningModal: React.FC = () => {
                             {status === 'idle' && (
                                 <div className="space-y-4">
                                     <p className="text-sm text-gray-300 leading-relaxed">
-                                        Welcome to the KinetiFi Sandbox. To interact with the AI Agent and register intent, your Smart Account needs testnet gas.
+                                        Welcome to the ZenithFi Sandbox. To interact with the AI Agent and register intent, your Smart Account needs testnet gas.
                                     </p>
                                     <div className="p-3 rounded-xl bg-orange-500/5 border border-orange-500/10">
                                         <p className="text-xs text-orange-200">

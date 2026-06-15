@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { useAgentData, type AgentOpportunity } from '@/hooks/useAgentData';
 import {
   Droplets,
@@ -136,7 +136,7 @@ const EmptyState: React.FC<{ isError: boolean; errorMsg: string; onRefresh: () =
         <div className="text-center">
           <p className="text-sm text-white font-medium mb-1">Agent Offline</p>
           <p className="text-xs text-gray-500 max-w-xs">
-            {errorMsg || 'Start the KinetiFi Agent (python -m uvicorn main:app) to scan your DeFi positions.'}
+            {errorMsg || 'Start the ZenithFi Agent (python -m uvicorn main:app) to scan your DeFi positions.'}
           </p>
         </div>
       </>
@@ -187,7 +187,7 @@ const DeFiPositions: React.FC = () => {
             <h3 className="text-sm font-semibold text-white">DeFi Upgrade Opportunities</h3>
             <p className="text-xs text-gray-500">
               {isLoading
-                ? 'Scanning via KinetiFi Agent…'
+                ? 'Scanning via ZenithFi Agent…'
                 : isError
                   ? 'Agent offline — run python -m uvicorn main:app'
                   : `${positionsFound} positions scanned · ${opportunities.length} upgrades found · $${totalUpgradeValue.toLocaleString(undefined, { maximumFractionDigits: 0 })} potential`}

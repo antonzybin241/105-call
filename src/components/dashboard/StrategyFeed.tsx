@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { useWatchContractEvent } from 'wagmi';
 import { Brain, Zap, CheckCircle, ChevronDown, ChevronUp, Bot, Loader2, Shield, AlertTriangle } from 'lucide-react';
 import { INTENT_REGISTRY_ADDRESS, intentRegistryAbi } from '@/constants/contracts';
@@ -32,7 +32,7 @@ const INITIAL_HISTORY: FeedEvent[] = [
         id: 'init-1',
         type: 'system',
         title: 'Agent Initialized',
-        detail: 'KinetiFi Agent connected to Base Sepolia Intent Registry.',
+        detail: 'ZenithFi Agent connected to Base Sepolia Intent Registry.',
         timestamp: new Date(Date.now() - 3600000), // 1 hour ago
     },
     {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import { useWallet } from '@/contexts/WalletContext';
 import {
   Layers,
@@ -164,7 +164,7 @@ const LandingPage: React.FC = () => {
               </svg>
             </div>
             <span className="text-xl font-bold tracking-tight">
-              Kineti<span className="text-[#00D4FF]">Fi</span>
+              Zenith<span className="text-[#00D4FF]">Fi</span>
             </span>
           </div>
             <ConnectWalletButton userId="sousa" />
@@ -280,7 +280,7 @@ const LandingPage: React.FC = () => {
               <div className="flex-1 flex justify-center">
                 <div className="flex items-center gap-2 px-4 py-1 rounded-lg bg-white/[0.04] text-xs text-gray-500 font-mono">
                   <Lock size={10} />
-                  app.kineti.fi/dashboard
+                  app.Zenith.fi/dashboard
                 </div>
               </div>
             </div>
@@ -411,7 +411,7 @@ const LandingPage: React.FC = () => {
             <Shield size={40} className="text-[#00D4FF] mx-auto mb-5" />
             <h2 className="text-2xl sm:text-3xl font-bold mb-4">Security is not optional</h2>
             <p className="text-gray-400 max-w-lg mx-auto mb-8 leading-relaxed">
-              KinetiFi is fully non-custodial. We never have access to your private keys or funds.
+              ZenithFi is fully non-custodial. We never have access to your private keys or funds.
               All wallet connections are read-only by default — you stay in complete control.
             </p>
             <div className="flex flex-wrap justify-center gap-6">
@@ -463,7 +463,7 @@ const LandingPage: React.FC = () => {
                   </svg>
                 </div>
                 <span className="text-sm font-bold">
-                  Kineti<span className="text-[#00D4FF]">Fi</span>
+                  Zenith<span className="text-[#00D4FF]">Fi</span>
                 </span>
               </div>
               <p className="text-xs text-gray-500 leading-relaxed">
@@ -504,7 +504,7 @@ const LandingPage: React.FC = () => {
 
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-white/[0.04]">
             <p className="text-[11px] text-gray-600">
-              &copy; 2026 KinetiFi. All rights reserved.
+              &copy; 2026 ZenithFi. All rights reserved.
             </p>
             <div className="flex items-center gap-4">
               <button className="w-8 h-8 rounded-lg flex items-center justify-center bg-white/[0.04] hover:bg-white/[0.08] text-gray-500 hover:text-white transition-all">

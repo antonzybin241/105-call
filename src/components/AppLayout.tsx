@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { useAppContext } from '@/contexts/AppContext';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { useWallet } from '@/contexts/WalletContext';
@@ -98,7 +98,7 @@ const AppLayout: React.FC = () => {
           >
             <h2 className="text-xl font-bold text-white mb-2">Wrong Network</h2>
             <p className="text-sm text-gray-400 leading-relaxed mb-6">
-              KinetiFi requires the Base Mainnet. Please switch your network to continue.
+              ZenithFi requires the Base Mainnet. Please switch your network to continue.
             </p>
             <button
               onClick={() => switchChain({ chainId: 8453 })}
@@ -128,8 +128,8 @@ const AppLayout: React.FC = () => {
             </div>
             <h2 className="text-xl font-bold text-white mb-2">Deploy Your Smart Wallet</h2>
             <p className="text-sm text-gray-400 leading-relaxed mb-6">
-              KinetiFi uses Account Abstraction (ERC-4337) to enable gasless AI-managed transactions.
-              Deploy your personal <span className="text-[#00D4FF] font-mono">KinetiFiAccount</span> to unlock the full dashboard.
+              ZenithFi uses Account Abstraction (ERC-4337) to enable gasless AI-managed transactions.
+              Deploy your personal <span className="text-[#00D4FF] font-mono">ZenithFiAccount</span> to unlock the full dashboard.
             </p>
             <div
               className="rounded-xl p-4 mb-6 text-left"
@@ -138,7 +138,7 @@ const AppLayout: React.FC = () => {
               <p className="text-xs text-[#00D4FF] font-semibold mb-1">Production Network</p>
               <p className="text-xs text-gray-400">
                 Connected to <span className="font-mono text-[#00D4FF]">Base Mainnet</span>. 
-                Deploy your personal <span className="font-mono text-[#00D4FF]">KinetiFiAccount</span> at:
+                Deploy your personal <span className="font-mono text-[#00D4FF]">ZenithFiAccount</span> at:
                 <span className="font-mono text-[#00D4FF] text-[10px] block mt-1 break-all">
                   {displayAddress ?? 'predicting…'}
                 </span>
@@ -214,7 +214,7 @@ const AppLayout: React.FC = () => {
                     </svg>
                   </div>
                   <span className="text-xs text-gray-500">
-                    KinetiFi Dashboard v1.0.0 · Base Mainnet
+                    ZenithFi Dashboard v1.0.0 · Base Mainnet
                   </span>
                 </div>
                 <div className="flex items-center gap-4">

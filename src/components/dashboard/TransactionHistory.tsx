@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+﻿import React, { useState, useMemo, useEffect } from 'react';
 import { useWallet } from '@/contexts/WalletContext';
 import {
   Filter,
@@ -6,7 +6,7 @@ import {
   Loader2,
   AlertTriangle,
 } from 'lucide-react';
-import { KinetiFi_ACCOUNT_ADDRESS } from '@/constants/contracts';
+import { ZenithFi_ACCOUNT_ADDRESS } from '@/constants/contracts';
 import { useEnvironment } from '@/contexts/EnvironmentContext';
 
 // Etherscan V2 API (Unified Endpoint for all chains)

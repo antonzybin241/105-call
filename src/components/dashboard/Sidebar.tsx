@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useAgentData } from '@/hooks/useAgentData';
 import { useAgentSession } from '@/hooks/useAgentSession';
@@ -95,7 +95,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeNav, onNavChange, collapsed, on
           </div>
           {!collapsed && (
             <span className="text-lg font-bold tracking-tight text-white whitespace-nowrap transition-colors duration-500">
-              Kineti<span style={{ color: accentColor }}>Fi</span>
+              Zenith<span style={{ color: accentColor }}>Fi</span>
               {agentActive && (
                 <motion.span 
                   initial={{ opacity: 0, x: -5 }}

@@ -1,20 +1,20 @@
-/**
- * KinetiFi — Deployed Contract Addresses & ABIs (Base Mainnet)
- * All contracts deployed via KinetiFi-foundry / DeployBase.s.sol
+﻿/**
+ * ZenithFi — Deployed Contract Addresses & ABIs (Base Mainnet)
+ * All contracts deployed via ZenithFi-foundry / DeployBase.s.sol
  */
 
 // ── Configuration ─────────────────────────────────────────────────────────────
 export const AGENT_ID = 0n;
 
-// ── KinetiFi Suite (Base Mainnet) ──────────────────────────────────────────────────────────────────
+// ── ZenithFi Suite (Base Mainnet) ──────────────────────────────────────────────────────────────────
 
-export const KinetiFi_AGENT_NFT_ADDRESS =
+export const ZenithFi_AGENT_NFT_ADDRESS =
   '0x5eCeC712ab5a1DFfaeab0086f04124574D5913Ec' as const;
 
-export const KinetiFi_ACCOUNT_ADDRESS =
+export const ZenithFi_ACCOUNT_ADDRESS =
   '0x8e31f83987E7034949C865DFac3089B5634E604a' as const;
 
-export const KinetiFi_ACCOUNT_FACTORY_ADDRESS =
+export const ZenithFi_ACCOUNT_FACTORY_ADDRESS =
   '0x52bdc8eb286b279aab769fc3ec433cc8df61ce43' as const;
 
 export const INTENT_REGISTRY_ADDRESS =
@@ -173,10 +173,10 @@ export const clGaugeAbi = [
   }
 ] as const;
 
-// ── KinetiFiAccountFactory ABI ────────────────────────────────────────────────
+// ── ZenithFiAccountFactory ABI ────────────────────────────────────────────────
 // getAddress(owner, salt) → deterministic smart account address (CREATE2)
 
-export const KinetiFiAccountFactoryAbi = [
+export const ZenithFiAccountFactoryAbi = [
   {
     type: 'function',
     name: 'getAddress',
@@ -202,7 +202,7 @@ export const KinetiFiAccountFactoryAbi = [
 
 
 // ── IntentRegistry ABI ────────────────────────────────────────────────────────
-// Source: KinetiFi-foundry/src/IntentRegistry.sol
+// Source: ZenithFi-foundry/src/IntentRegistry.sol
 
 export const intentRegistryAbi = [
   {
@@ -256,8 +256,8 @@ export const intentRegistryAbi = [
   },
 ] as const;
 
-// ── KinetiFiSessionModule ABI ─────────────────────────────────────────────────
-// Source: KinetiFi-foundry/src/KinetiFiSessionModule.sol
+// ── ZenithFiSessionModule ABI ─────────────────────────────────────────────────
+// Source: ZenithFi-foundry/src/ZenithFiSessionModule.sol
 
 export const sessionModuleAbi = [
   {
@@ -348,10 +348,10 @@ export const sessionModuleAbi = [
   },
 ] as const;
 
-// ── KinetiFiAccount ABI ───────────────────────────────────────────────────────
-// Source: KinetiFi-foundry/src/KinetiFiAccount.sol (key functions only)
+// ── ZenithFiAccount ABI ───────────────────────────────────────────────────────
+// Source: ZenithFi-foundry/src/ZenithFiAccount.sol (key functions only)
 
-export const KinetiFiAccountAbi = [
+export const ZenithFiAccountAbi = [
   {
     type: 'function',
     name: 'execute',

@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+﻿import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Send, 
@@ -26,7 +26,7 @@ const AgentChatView: React.FC = () => {
   const positions = agentData?.positions || [];
   
   const [messages, setMessages] = useState<Message[]>(() => {
-    const saved = localStorage.getItem('KinetiFi_chat_history');
+    const saved = localStorage.getItem('ZenithFi_chat_history');
     if (saved && !isMockMode) return JSON.parse(saved);
     
     if (isMockMode) {
@@ -62,7 +62,7 @@ const AgentChatView: React.FC = () => {
     return [
       {
         role: 'assistant',
-        content: "Hello! I'm your KinetiFi AI Strategist. I have access to your portfolio data and can help you optimize your yields on Base. How can I assist you today?",
+        content: "Hello! I'm your ZenithFi AI Strategist. I have access to your portfolio data and can help you optimize your yields on Base. How can I assist you today?",
         timestamp: Date.now()
       }
     ];
@@ -74,7 +74,7 @@ const AgentChatView: React.FC = () => {
 
   // Save to localStorage
   useEffect(() => {
-    localStorage.setItem('KinetiFi_chat_history', JSON.stringify(messages));
+    localStorage.setItem('ZenithFi_chat_history', JSON.stringify(messages));
   }, [messages]);
 
   // Auto-scroll to bottom
@@ -158,7 +158,7 @@ const AgentChatView: React.FC = () => {
           timestamp: Date.now()
         }
       ]);
-      localStorage.removeItem('KinetiFi_chat_history');
+      localStorage.removeItem('ZenithFi_chat_history');
     }
   };
 
@@ -172,7 +172,7 @@ const AgentChatView: React.FC = () => {
           </div>
           <div>
             <h2 className="text-sm font-bold text-white flex items-center gap-2">
-              KinetiFi Strategic Agent
+              ZenithFi Strategic Agent
               <span className={`flex h-2 w-2 rounded-full animate-pulse ${isConnected ? 'bg-[#00FFA3]' : 'bg-red-500'}`} />
             </h2>
             <p className="text-[10px] text-gray-500 uppercase tracking-wider font-semibold">

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
+﻿import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 import { base, baseSepolia } from 'wagmi/chains';
 import { Chain } from 'viem';
 
@@ -19,12 +19,12 @@ export const EnvironmentProvider: React.FC<{ children: ReactNode }> = ({ childre
     const toggleEnvironment = () => {};
 
     const [isMockMode, setIsMockMode] = useState<boolean>(() => {
-        const saved = localStorage.getItem('kineti_mock_mode');
+        const saved = localStorage.getItem('Zenith_mock_mode');
         return saved ? saved === 'true' : true; // Default to true for showcase
     });
 
     useEffect(() => {
-        localStorage.setItem('kineti_mock_mode', isMockMode.toString());
+        localStorage.setItem('Zenith_mock_mode', isMockMode.toString());
     }, [isMockMode]);
 
     const targetChain = environment === 'PRODUCTION' ? base : baseSepolia;

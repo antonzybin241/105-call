@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+﻿import React, { useState, useEffect, useMemo } from 'react';
 import { useWallet, type WalletType } from '@/contexts/WalletContext';
 
 /** True when the user is on a phone/tablet — no browser MetaMask extension available */
@@ -239,7 +239,7 @@ const ConnectWalletModal: React.FC = () => {
               >
                 <Shield size={14} className="text-[#00D4FF] flex-shrink-0" />
                 <p className="text-[11px] text-gray-400 leading-relaxed">
-                  KinetiFi never stores your private keys. Connections are secured end-to-end.
+                  ZenithFi never stores your private keys. Connections are secured end-to-end.
                 </p>
               </div>
 
